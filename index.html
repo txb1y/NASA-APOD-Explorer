@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Astronomy Picture of the Day Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NASA Astronomy Picture of the Day</h1>
+        </header>
+
+        <div class="controls">
+            <div class="date-picker">
+                <label for="date-input">Select Date:</label>
+                <input type="date" id="date-input">
+            </div>
+            <div class="buttons">
+                <button id="today-btn">Today</button>
+                <button id="random-btn">Random Date</button>
+                <button id="favorite-btn" aria-label="Add to favorites">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="error-container" class="error-container hidden">
+            <p id="error-message">Something went wrong. Please try again.</p>
+        </div>
+
+        <main id="apod-container" class="hidden">
+            <h2 id="apod-title"></h2>
+            <p id="apod-date"></p>
+            <div class="content-wrapper">
+                <div class="media-wrapper">
+                    <div id="media-container">
+                        <!-- Content will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                <div class="explanation-wrapper">
+                    <div class="explanation">
+                        <p id="apod-explanation"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="favorites-container" class="favorites-container">
+            <h3>Favorites</h3>
+            <div id="favorites-list" class="favorites-list">
+                <!-- Favorites will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            <span>Created By</span>
+            <a href="https://www.bharathi-portfolio.xyz/" target="_blank" class="portfolio-link">Bharathi <i class="fas fa-external-link-alt"></i></a>
+            <span>|</span>
+            <span>NASA's APOD API</span>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/bharathi54123" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
